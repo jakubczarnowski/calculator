@@ -1,4 +1,4 @@
-# It may not work as expected!
+# Small recruitement calculator app
 Calculator intended for resolving equations using different mathematical notation, as per examples below
 5 + 3 -> + 5 3 
 2 - (1 + 4) -> - 2 + 1 4
