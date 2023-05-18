@@ -5,7 +5,6 @@ import { SignButton } from './components/SignButton';
 import { calculate } from './utils/calculate';
 import { useHistory } from './hooks/useHistory';
 import { EquationHistory } from './providers/HistoryProvider';
-import React from 'react';
 
 function App() {
   const toast = useToast();
