@@ -7,7 +7,7 @@ type Props = {
 
 export const Layout = ({ children, ...props }: Props) => {
   return (
-    <Flex alignItems={'center'} justifyContent={'center'} minH={'100vh'} w={'full'} {...props}>
+    <Flex alignItems="center" justifyContent="center" minH="100vh" w="full" {...props}>
       {children}
     </Flex>
   );

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Flex, FlexProps } from '@chakra-ui/react';
 
 type Props = {
@@ -9,9 +10,9 @@ export const SignButton = ({ children, onClick, ...props }: Props) => {
   return (
     <Flex
       aspectRatio={1}
-      maxW={'300px'}
+      maxW="300px"
       border="1px solid black"
-      borderRadius={'2xl'}
+      borderRadius="2xl"
       direction="column"
       alignItems="center"
       justifyContent="center"

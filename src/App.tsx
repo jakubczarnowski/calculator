@@ -5,6 +5,7 @@ import { SignButton } from './components/SignButton';
 import { calculate } from './utils/calculate';
 import { useHistory } from './hooks/useHistory';
 import { EquationHistory } from './providers/HistoryProvider';
+import React from 'react';
 
 function App() {
   const toast = useToast();
@@ -44,7 +45,7 @@ function App() {
 
   const renderButton = (sign: string, onClick?: () => void) => (
     <SignButton onClick={onClick ? onClick : () => handleAddSign(sign)}>
-      <Text userSelect={'none'} fontSize={['lg', '3xl', '5xl']}>
+      <Text userSelect="none" fontSize={['lg', '3xl', '5xl']}>
         {sign}
       </Text>
     </SignButton>
@@ -53,26 +54,26 @@ function App() {
   return (
     <Layout>
       <Container
-        display={'flex'}
-        flexDir={'column'}
+        display="flex"
+        flexDir="column"
         border="1px solid black"
-        borderRadius={'2xl'}
-        maxW={'container.lg'}
+        borderRadius="2xl"
+        maxW="container.lg"
         p={4}
       >
-        <Flex direction={'row'} gap={4}>
+        <Flex direction="row" gap={4}>
           <Text fontSize="2xl" fontWeight="bold">
             Calculator
           </Text>
-          <Input readOnly variant="flushed" textAlign={'right'} value={equation} />
+          <Input readOnly variant="flushed" textAlign="right" value={equation} />
         </Flex>
         <Box ml="auto">
-          <Text fontSize={'2xl'} fontWeight={'semibold'} w="full" textAlign={'right'}>
+          <Text fontSize="2xl" fontWeight="semibold" w="full" textAlign="right">
             Result: {result}
           </Text>
         </Box>
-        <Flex direction={{ base: 'column', md: 'row' }} w="full" justifyContent={'center'} gap={3}>
-          <Flex maxW={'container.md'} w="full" direction="column" gap={2}>
+        <Flex direction={{ base: 'column', md: 'row' }} w="full" justifyContent="center" gap={3}>
+          <Flex maxW="container.md" w="full" direction="column" gap={2}>
             <Flex direction="row" gap={2}>
               {renderButton('1')}
               {renderButton('2')}
@@ -99,27 +100,27 @@ function App() {
             </Flex>
           </Flex>
 
-          <Flex direction={'column'} w={'200px'} maxHeight={'700px'} overflowY={'auto'} gap={2}>
+          <Flex direction="column" w="200px" maxHeight="700px" overflowY="auto" gap={2}>
             {history
               .sort((a, b) => b.timestamp - a.timestamp)
               .map((item, index) => (
                 <Flex
                   key={index}
-                  direction={'column'}
+                  direction="column"
                   p={2}
                   w="full"
                   onClick={() => handleGoToHistory(item)}
                   border="1px solid black"
-                  borderRadius={'xl'}
+                  borderRadius="xl"
                 >
                   <Text
-                    userSelect={'none'}
+                    userSelect="none"
                     fontSize={['sm', 'lg', '2xl']}
                     w="full"
-                    fontWeight={'semibold'}
+                    fontWeight="semibold"
                   >
                     Equation:{' '}
-                    <Text as={'span'} fontWeight={'light'}>
+                    <Text as="span" fontWeight="light">
                       {item.equation}
                     </Text>
                   </Text>
